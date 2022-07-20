@@ -1,6 +1,6 @@
 .recipes {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
@@ -8,4 +8,18 @@
 
 .recipes > div {
   margin: 2em;
+}
+
+body {
+  background-image: url("/images/background.jpg");
+  
+}
+
+h1 {
+  color: #3d2921
+}
+
+p {
+  color: black;
+  font-style: italic;
 }

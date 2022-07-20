@@ -27,10 +27,45 @@ let recipes = [
   }
 ]
 
+
 // Your code goes here:
+
+
+// for (let i = 0; i < recipes.length; i++) {
+//   recCont = document.createElement("div")
+
+//   recCont.innerHTML = (`
+//     <h1> ${recipes[i].title} </h1>
+//     <p>Time: ${recipes[i].time}</p>
+//     <p>Calories: ${recipes[i].calories}</p>
+//     <p>Ingredients: ${recipes[i].ingredients}</p>`)
+
+//   document.querySelector(".recipes").appendChild(recCont)
+
+// }
+
+
+recipes.forEach(displayRecipes => {
+  const recCont = document.createElement("div")
+
+  recCont.innerHTML = (`
+    <h1> ${displayRecipes.title} </h1>
+    <p>Time: ${displayRecipes.time}</p>
+    <p>Calories: ${displayRecipes.calories}</p>
+    <p>Ingredients: ${displayRecipes.ingredients.join(", ")}</p>`)
+
+
+  let index = document.querySelector(".recipes")
+  index.appendChild(recCont)
+})
+
+
+
+
+
+
 
 // Each recipe should be in its own div, that can be recCont. We are declaring it here since we will want to change its value with each itteration of the loop.
 
-let recCont
 
 // HINT: Using .map will be very helpful when itterating through the ingredients array.
