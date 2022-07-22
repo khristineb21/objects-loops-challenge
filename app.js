@@ -31,25 +31,11 @@ let recipes = [
 // Your code goes here:
 
 
-// for (let i = 0; i < recipes.length; i++) {
-//   recCont = document.createElement("div")
-
-//   recCont.innerHTML = (`
-//     <h1> ${recipes[i].title} </h1>
-//     <p>Time: ${recipes[i].time}</p>
-//     <p>Calories: ${recipes[i].calories}</p>
-//     <p>Ingredients: ${recipes[i].ingredients}</p>`)
-
-//   document.querySelector(".recipes").appendChild(recCont)
-
-// }
-
 
 recipes.forEach(displayRecipes => {
   const recCont = document.createElement("div")
 
-  recCont.innerHTML = (`
-    <h1> ${displayRecipes.title} </h1>
+  recCont.innerHTML = (`<h1> ${displayRecipes.title} </h1>
     <p>Time: ${displayRecipes.time}</p>
     <p>Calories: ${displayRecipes.calories}</p>
     <p>Ingredients: ${displayRecipes.ingredients.join(", ")}</p>`)
